@@ -1,17 +1,6 @@
-## QuickAdminPanel Demo with Tailwind Theme
+## Botnova
 
-Laravel adminpanel, generated with our [QuickAdminPanel Generator](https://quickadminpanel.com), with changed design to Tailwind CSS based on [tailwindcomponents/dashboard theme](https://github.com/tailwindcomponents/dashboard)
-
-- - - - -
-
-![QuickAdminPanel Tailwind Table](https://quickadminpanel.com/blog/wp-content/uploads/2020/09/Screen-Shot-2020-09-23-at-9.30.36-AM.png)
-
-![QuickAdminPanel Tailwind Form](https://quickadminpanel.com/blog/wp-content/uploads/2020/09/Screen-Shot-2020-09-23-at-9.32.37-AM.png)
-
-![QuickAdminPanel Tailwind Login](https://quickadminpanel.com/blog/wp-content/uploads/2020/09/Screen-Shot-2020-09-23-at-9.30.45-AM.png)
-
-- - - - -
-
+---
 
 ## How to use
 
@@ -23,14 +12,3 @@ Laravel adminpanel, generated with our [QuickAdminPanel Generator](https://quick
 - That's it: launch the main URL. 
 - You can login to adminpanel with default credentials __admin@admin.com__ - __password__
 
-## License
-
-Basically, feel free to use and re-use any way you want.
-
----
-
-## More from our LaravelDaily Team
-
-- Check out our adminpanel generator [QuickAdminPanel](https://quickadminpanel.com)
-- Subscribe to my [YouTube channel Laravel Business](https://www.youtube.com/channel/UCTuplgOBi6tJIlesIboymGA)
-- Enroll in my [Laravel Online Courses](https://laraveldaily.teachable.com/)
