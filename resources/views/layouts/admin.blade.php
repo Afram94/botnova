@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <div class="flex h-screen bg-gray-200">
+    <div class="flex h-screen bg-gray-200" id="app">
         @include('partials.menu')
 
         <div class="flex-1 flex flex-col overflow-hidden">
@@ -40,7 +40,8 @@
 
                 
     <nav class="flex justify-between w-full p-2">
-        <a href="/"><span class="font-semibold text-xl tracking-tight">Smart Service</span></a>
+        <!-- <a href="/"><span class="font-semibold text-xl tracking-tight">Smart Service</span></a> -->
+        <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">BoT <span class="text-indigo-600">NoVA</span></h2>
         <!-- <div class="md:items-center md:w-auto flex"> -->
 
         <div class="flex text-sm">
@@ -49,7 +50,7 @@
         </div>
 
         <div class="flex text-sm">
-            <a class=" border-2 border-white-500 rounded-md text-white-500 px-4 py-2 transition duration-300 ease-in-out hover:text-gray-500 mr-6""
+            <a class=" border-2 border-white-500 rounded-md text-white-500 px-4 py-2 transition duration-300 ease-in-out hover:text-gray-500 mr-6"
                     href=" #" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                 Logga ut</a>
             <!-- </div> -->
@@ -101,6 +102,7 @@
             </form>
         </div>
     </div>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/perfect-scrollbar.min.js"></script>
     <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
@@ -119,7 +121,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+    
     <script src="{{ asset('js/main.js') }}"></script>
+   
     <script>
         $(function() {
   let copyButtonTrans = '{{ trans('global.datatables.copy') }}'
@@ -189,14 +193,6 @@
         }
       },
       {
-        extend: 'csv',
-        className: 'btn-gray',
-        text: csvButtonTrans,
-        exportOptions: {
-          columns: ':visible'
-        }
-      },
-      {
         extend: 'excel',
         className: 'btn-gray',
         text: excelButtonTrans,
@@ -212,27 +208,28 @@
           columns: ':visible'
         }
       },
-      {
+     /*  {
         extend: 'print',
         className: 'btn-gray',
         text: printButtonTrans,
         exportOptions: {
           columns: ':visible'
         }
-      },
-      {
+      }, */
+      /* {
         extend: 'colvis',
         className: 'btn-gray',
         text: colvisButtonTrans,
         exportOptions: {
           columns: ':visible'
         }
-      }
+      } */
     ]
   });
 });
 
     </script>
+    @include('sweetalert::alert')
     @yield('scripts')
 </body>
 

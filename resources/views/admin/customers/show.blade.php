@@ -23,7 +23,7 @@
                 </tr>
                 <tr>
                     <th>
-                         Name
+                        Name
                     </th>
                     <td>
                         {{ $customer->name }}
@@ -39,7 +39,7 @@
                 </tr>
                 <tr>
                     <th>
-                       Org_number
+                        Org_number
                     </th>
                     <td>
                         {{ $customer->org_number }}
@@ -47,7 +47,7 @@
                 </tr>
                 <tr>
                     <th>
-                       SSN
+                        SSN
                     </th>
                     <td>
                         {{ $customer->SSN }}
@@ -71,7 +71,7 @@
                 </tr>
                 <tr>
                     <th>
-                          Description
+                        Description
                     </th>
                     <td>
                         {{ $customer->description }}
@@ -83,17 +83,47 @@
                     </th>
                     <td>
                         @foreach($customer->users as $key => $users)
-                            <span class="label label-info">{{ $users->name }}</span>
+                        <span class="label label-info">{{ $users->name }}</span>
                         @endforeach
                     </td>
                 </tr>
+                <tr>
+                    <th>
+                        Serial number
+                    </th>
+                    <td>
+                        @foreach($customer->productinfos as $key => $item)
+                        <span class="label label-info">{{ $item->serial_number }}
+                            <hr>
+                        </span>
+                        @endforeach
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Artikel
+                    </th>
+                    <td>
+                        @foreach($customer->productinfos as $key => $item)
+                        <span class="label label-info">{{ $item->products[0]['name']}}
+                            <hr>
+                        </span>
+                        @endforeach
+                    </td>
+                </tr>
+
+
             </tbody>
         </table>
+
         <div class="block pt-4">
             <a class="btn-md btn-gray" href="{{ route('admin.customers.index') }}">
                 {{ trans('global.back_to_list') }}
             </a>
         </div>
+
+
+
     </div>
 </div>
 @endsection

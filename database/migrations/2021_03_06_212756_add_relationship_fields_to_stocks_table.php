@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductTable extends Migration
+class AddRelationshipFieldsToStocksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateProductTable extends Migration
      */
     public function up()
     {
-        Schema::create('product', function (Blueprint $table) {
+        Schema::table('stocks', function (Blueprint $table) {
             $table->unsignedInteger('product_id');
-            $table->string('product_name');
-            $table->timestamps();
+            $table->foreign('product_id', 'product_fk_1230965')->references('id')->on('products');
+            
         });
     }
 
@@ -25,8 +25,10 @@ class CreateProductTable extends Migration
      *
      * @return void
      */
-    public function down()
+    /* public function down()
     {
-        Schema::dropIfExists('product');
-    }
+        Schema::table('stocks', function (Blueprint $table) {
+            //
+        });
+    } */
 }

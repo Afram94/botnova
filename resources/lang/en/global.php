@@ -29,7 +29,7 @@ return [
     'remember_me'                          => 'Remember me',
     'reset_password'                       => 'Reset Password',
     'send_password'                        => 'Send Password Reset Link',
-    'save'                                 => 'Save',
+    'save'                                 => 'Spara!',
     'search'                               => 'Search',
     'searching'                            => 'Searching',
     'no_results'                           => 'No results',
@@ -270,4 +270,8 @@ return [
     'courses'                              => 'Courses',
     'calendar'                             => 'Calendar',
     'messenger'                            => 'Messenger',
+    // Afram egna Meddelande
+    'data_saved_successfully'              => 'Sparad',
+    'data_deleted_successfully'            => 'Borttagen',
+    'data_edited_successfully'             => 'Ändringar sparas',
 ];

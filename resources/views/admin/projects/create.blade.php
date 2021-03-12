@@ -14,7 +14,7 @@
 
 
         <div class="mb-3">
-                <label for="customers" class="text-xs">{{ trans('cruds.project.fields.customers') }}</label>
+                <label for="customers" class="text-xs">Välj kund</label>
                 <div style="padding-bottom: 4px">
                     <span class="btn-sm btn-indigo select-all" style="border-radius: 0">{{ trans('global.select_all') }}</span>
                     <span class="btn-sm btn-indigo deselect-all" style="border-radius: 0">{{ trans('global.deselect_all') }}</span>
@@ -27,7 +27,7 @@
                 @if($errors->has('customers'))
                     <p class="invalid-feedback">{{ $errors->first('customers') }}</p>
                 @endif
-                <span class="block">{{ trans('cruds.project.fields.customers_helper') }}</span>
+                <span class="block"><!-- {{ trans('cruds.project.fields.customers_helper') }} --></span>
             </div>
 
 
@@ -45,6 +45,8 @@
                 @endif
                 <span class="block">{{ trans('cruds.project.fields.name_helper') }}</span>
             </div>
+
+            
             <div class="mb-3">
                 <label for="users" class="text-xs">{{ trans('cruds.project.fields.users') }}</label>
                 <div style="padding-bottom: 4px">

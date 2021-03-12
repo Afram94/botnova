@@ -53,7 +53,7 @@ class NoticesController extends Controller
         $notice = Notice::create($request->all());
         $notice->users()->sync($request->input('users', []));
 
-        return redirect()->route('admin.notices.index');
+        return redirect()->route('admin.notices.index')->withSuccessMessage(__('global.data_saved_successfully'));
     }
 
     /**
@@ -115,6 +115,6 @@ class NoticesController extends Controller
 
         $notice->delete();
 
-        return back();
+        return back()->withSuccessMessage(__('global.data_deleted_successfully'));
     }
 }

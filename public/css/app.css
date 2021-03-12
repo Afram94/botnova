@@ -23708,7 +23708,7 @@ video {
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  border-radius: 0.125rem;
+  border-radius: 0.5rem;
   font-size: 0.875rem;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -24257,6 +24257,13 @@ header.main-header {
 .main-card .show-table td {
   padding: 0.75rem;
   text-align: left;
+}
+
+/* Added CSS by Afram */
+
+.dataTables_scroll {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.25rem;
 }
 
 @media (min-width: 640px) {

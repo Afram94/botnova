@@ -21,12 +21,20 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
 
     //Customers
-    Route::delete('customers/destroy', 'CustomerController@massDestroy')->name('customers.massDestroy');
+    Route::delete('customers/destroy', 'CustomersController@massDestroy')->name('customers.massDestroy');
     Route::resource('customers', 'CustomersController');
 
     //Notices
     Route::delete('notices/destroy', 'NoticesController@massDestroy')->name('notices.massDestroy');
     Route::resource('notices', 'NoticesController');
+
+    //Products
+    Route::delete('products/destroy', 'ProductsController@massDestroy')->name('products.massDestroy');
+    Route::resource('products', 'ProductsController');
+
+    //ProductInfos
+    Route::delete('productinfos/destroy', 'ProductInfosController@massDestroy')->name('productinfos.massDestroy');
+    Route::resource('productinfos', 'ProductInfosController');
 
 
     // Roles
@@ -40,6 +48,19 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Projects
     Route::delete('projects/destroy', 'ProjectsController@massDestroy')->name('projects.massDestroy');
     Route::resource('projects', 'ProjectsController');
+
+    // Stocks
+    //Route::delete('stocks/destroy', 'StocksController@massDestroy')->name('stocks.massDestroy');
+    Route::resource('stocks', 'StocksController');
+
+     // Tasks
+    
+    Route::resource('tasks', 'TasksController');
+
+    // Transactions
+//    Route::delete('transactions/destroy', 'TransactionsController@massDestroy')->name('transactions.massDestroy');
+    Route::post('transactions/{stock}/storeStock', 'TransactionsController@storeStock')->name('transactions.storeStock');
+    Route::resource('transactions', 'TransactionsController');
 
     // Folders
     Route::delete('folders/destroy', 'FoldersController@massDestroy')->name('folders.massDestroy');

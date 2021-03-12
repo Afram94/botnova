@@ -1,17 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Api\V1\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\MassDestroyCustomerRequest;
-use App\Http\Requests\StoreCustomerRequest;
-use App\Http\Requests\UpdateCustomerRequest;
+use App\Http\Requests\StoreProductinfosRequest;
+use App\Http\Requests\UpdateProductinfosRequest;
+use App\Http\Resources\Admin\ProductinfosResource;
+use App\Productinfos;
 use App\Customer;
+use App\Product;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class ProductController extends Controller
+class ProductinfosApiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +22,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        abort_if(Gate::denies('productinfo_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        return new ProductinfoResource(Productinfo::with(['products', 'customers', 'stocks'])->get());
     }
 
     /**
@@ -28,10 +32,10 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+   /*  public function create()
     {
         //
-    }
+    } */
 
     /**
      * Store a newly created resource in storage.
@@ -39,9 +43,13 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProductinfoRequest $request)
     {
-        //
+        $productinfo = Productinfo::create($request->all());
+
+        return (new ProductinfoResource($productinfo))
+            ->response()
+            ->setStatusCode(Response::HTTP_CREATED);
     }
 
     /**

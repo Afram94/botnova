@@ -156,6 +156,87 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => 37,
                 'title' => 'notice_access',
             ],
+            [
+                'id'    => 38,
+                'title' => 'product_create',
+            ],
+            [
+                'id'    => 39,
+                'title' => 'product_edit',
+            ],
+            [
+                'id'    => 40,
+                'title' => 'product_show',
+            ],
+            [
+                'id'    => 41,
+                'title' => 'product_delete',
+            ],
+            [
+                'id'    => 42,
+                'title' => 'product_access',
+            ],
+            [
+                'id'    => 43,
+                'title' => 'productinfo_create',
+            ],
+            [
+                'id'    => 44,
+                'title' => 'productinfo_edit',
+            ],
+            [
+                'id'    => 45,
+                'title' => 'productinfo_show',
+            ],
+            [
+                'id'    => 46,
+                'title' => 'productinfo_delete',
+            ],
+            [
+                'id'    => 47,
+                'title' => 'productinfo_access',
+            ],
+            [
+                'id'    => 48,
+                'title' => 'stock_create',
+            ],
+            [
+                'id'    => 49,
+                'title' => 'stock_edit',
+            ],
+            [
+                'id'    => 50,
+                'title' => 'stock_show',
+            ],
+            [
+                'id'    => 51,
+                'title' => 'stock_delete',
+            ],
+            [
+                'id'    => 52,
+                'title' => 'stock_access',
+            ],
+            [
+                'id'    => 53,
+                'title' => 'transaction_create',
+            ],
+            [
+                'id'    => 54,
+                'title' => 'transaction_edit',
+            ],
+            [
+                'id'    => 55,
+                'title' => 'transaction_show',
+            ],
+            [
+                'id'    => 56,
+                'title' => 'transaction_delete',
+            ],
+            [
+                'id'    => 57,
+                'title' => 'transaction_access',
+            ],
+            
         ];
 
         Permission::insert($permissions);

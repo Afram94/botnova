@@ -4,6 +4,9 @@
     <div class="flex items-center justify-center mt-4">
         <div class="flex items-center">
             <a href="/" class="text-white text-2xl mx-2 font-semibold">Smart Service</a>
+            <!-- <a href="/" class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Smart Service</a><span class="text-indigo-600">Table</span> -->
+            <!-- <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Products <span class="text-indigo-600">Table</span></h2> -->
+            
         </div>
     </div>
     <nav class="mt-4">
@@ -84,6 +87,46 @@
                 </i>
 
                 <span class="mx-4">Notices</span>
+            </a>
+        @endcan
+
+        @can('product_access')
+            <a class="nav-link{{ request()->is('admin/products*') ? ' active' : '' }}" href="{{ route('admin.products.index') }}">
+                <i class="fa-fw fas fa-project-diagram">
+
+                </i>
+
+                <span class="mx-4">Products</span>
+            </a>
+        @endcan
+
+        @can('productinfo_access')
+            <a class="nav-link{{ request()->is('admin/productinfos*') ? ' active' : '' }}" href="{{ route('admin.productinfos.index') }}">
+                <i class="fa-fw fas fa-project-diagram">
+
+                </i>
+
+                <span class="mx-4">Products Info</span>
+            </a>
+        @endcan
+        
+        @can('stock_access')
+            <a class="nav-link{{ request()->is('admin/stocks*') ? ' active' : '' }}" href="{{ route('admin.stocks.index') }}">
+                <i class="fa-fw fas fa-project-diagram">
+
+                </i>
+
+                <span class="mx-4">Stocks</span>
+            </a>
+        @endcan
+
+        @can('transaction_access')
+            <a class="nav-link{{ request()->is('admin/transactions*') ? ' active' : '' }}" href="{{ route('admin.transactions.index') }}">
+                <i class="fa-fw fas fa-project-diagram">
+
+                </i>
+
+                <span class="mx-4">Transactions</span>
             </a>
         @endcan
 

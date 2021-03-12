@@ -38,7 +38,7 @@
 }
 
 .btn-md {
-  @apply inline-block px-3 py-2 rounded-sm text-sm mx-1 select-none cursor-pointer;
+  @apply inline-block px-3 py-2 rounded-lg text-sm mx-1 select-none cursor-pointer;
 
   &:focus {
     @apply outline-none;
@@ -285,4 +285,9 @@ header.main-header {
       @apply p-3 text-left;
     }
   }
+}
+
+/* Added CSS by Afram */
+.dataTables_scroll {
+  @apply shadow-md rounded; 
 }

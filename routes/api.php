@@ -19,6 +19,18 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Notices
     Route::apiResource('notices', 'NoticesApiController');
 
+    // Products
+    Route::apiResource('products', 'ProductsApiController');
+
+    // Productinfos
+    Route::apiResource('productinfos', 'ProductinfosApiController');
+
+    // Stocks
+    Route::apiResource('stocks', 'StocksApiController');
+
+    // Transactions
+    Route::apiResource('transactions', 'TransactionsApiController');
+
     // Folders
     Route::post('folders/media', 'FoldersApiController@storeMedia')->name('folders.storeMedia');
     Route::apiResource('folders', 'FoldersApiController');

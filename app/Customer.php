@@ -39,8 +39,13 @@ class Customer extends Model
         return $this->belongsToMany(User::class);
     }
     
-     /*  public function projects()
+     public function productinfos()
     {
-        return $this->belongsToMany(Project::class);
-    }  */ 
+        return $this->belongsToMany(Productinfo::class);
+    } 
+
+    /*   public function products()
+    {
+        return $this->belongsToMany(Product::class);
+    }   */
 }

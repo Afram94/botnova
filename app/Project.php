@@ -38,5 +38,5 @@ class Project extends Model
      public function customers()
     {
         return $this->belongsToMany(Customer::class);
-    } 
+    }
 }
