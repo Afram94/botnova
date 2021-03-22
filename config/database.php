@@ -71,7 +71,7 @@ return [
             'url' => $DATABASE_URL["host"],
             'host' => $DATABASE_URL["port"],
             'port' => env('DB_PORT', '5432'),
-            'database' => ltrim($DATABASE_URL["path], "/"),
+            'database' => ltrim($DATABASE_URL["path"], "/"),
             'username' => $DATABASE_URL["user"],
             'password' => $DATABASE_URL["pass"],
             'charset' => 'utf8',
