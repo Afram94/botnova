@@ -34,7 +34,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     //ProductInfos
     
-    Route::resource('productinfos', 'ProductInfosController');
+    Route::resource('productinfos', 'ProductinfosController');
 
 
     // Roles
