@@ -2,12 +2,12 @@
 
 namespace App\Http\Requests;
 
-use App\Notice;
-use Gate;
 use Illuminate\Foundation\Http\FormRequest;
+use Gate;
 use Illuminate\Http\Response;
+use App\Task;
 
-class StoreNoticeRequest extends FormRequest
+class StoreTaskRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -16,7 +16,7 @@ class StoreNoticeRequest extends FormRequest
      */
     public function authorize()
     {
-        abort_if(Gate::denies('notice_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('task_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return true;
     }
@@ -29,14 +29,11 @@ class StoreNoticeRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'    => [
+            'name'  =>[
                 'string',
                 'required',
             ],
-            'description'    => [
-                'string',
-                'required',
-            ],
+            
         ];
     }
 }

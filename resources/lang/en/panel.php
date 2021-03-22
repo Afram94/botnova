@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'Folders & Files',
+    'site_title' => 'BotNova',
 ];

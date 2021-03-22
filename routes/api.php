@@ -1,4 +1,9 @@
 <?php
+use App\Http\Controllers\Admin\CustomersController;
+use App\Http\Controllers\Admin\TasksController;
+use App\Http\Controllers\Api\V1\Admin\TasksApiController;
+
+
 
 Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', 'middleware' => ['auth:api']], function () {
     // Permissions
@@ -28,6 +33,9 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Stocks
     Route::apiResource('stocks', 'StocksApiController');
 
+    // tasks
+    Route::apiResource('tasks', 'TasksApiController');
+
     // Transactions
     Route::apiResource('transactions', 'TransactionsApiController');
 
@@ -35,3 +43,16 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     Route::post('folders/media', 'FoldersApiController@storeMedia')->name('folders.storeMedia');
     Route::apiResource('folders', 'FoldersApiController');
 });
+
+Route::get('/customer-information', [CustomersController::class, 'customerInfo']);
+
+/* Route::apiResource('/tasks', [TasksController::class, 'store']); */
+
+Route::middleware('auth:sanctum')->group(function () {
+    
+    /* Route::get('/task/{task}', [TasksController::class, 'index']); */
+    /* Route::post('/customer', [CustomerController::class, 'store']);  */
+    /* Route::get('/customer/{customer}',  [CustomerController::class, 'show']); */
+   /*  Route::patch('/customer/{customer}', [CustomerController::class, 'update']);
+    Route::delete('/customer/{customer}', [CustomerController::class, 'destroy']); */
+   });

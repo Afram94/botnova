@@ -55,7 +55,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
      // Tasks
     
-    Route::resource('tasks', 'TasksController');
+     Route::resource('tasks', 'TasksController'); 
 
     // Transactions
 //    Route::delete('transactions/destroy', 'TransactionsController@massDestroy')->name('transactions.massDestroy');
@@ -75,3 +75,5 @@ Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 
         Route::post('password', 'ChangePasswordController@update')->name('password.update');
     }
 });
+
+/* Route::get('/tasks/create', [TasksController::class, 'create']); */

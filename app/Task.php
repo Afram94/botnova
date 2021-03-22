@@ -9,14 +9,17 @@ class Task extends Model
 {
    // use HasFactory;
 
- /*   public $table = 'notices'; */
+    public $table = 'tasks'; 
 
    protected $dates = [
-       
+    'created_at',
+    'updated_at',
    ];
 
    protected $fillable = [
-       
+    'created_at',
+    'updated_at',
+    'name',
    ];
 
 }

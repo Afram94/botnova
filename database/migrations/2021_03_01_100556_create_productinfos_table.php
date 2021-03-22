@@ -16,7 +16,7 @@ class CreateProductinfosTable extends Migration
         Schema::create('productinfos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('description');
-            $table->string('serial_number');
+            $table->string('serial_number')->unique();
             $table->timestamps();
         });
     }

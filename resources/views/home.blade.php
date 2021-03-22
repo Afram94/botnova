@@ -34,7 +34,7 @@
                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
             </path>
         </svg>
-        <span> alla kunder</span>
+        <span> Alla kunder</span>
     </div>
     <span>Visa &RightArrow;</span>
 </a>
@@ -51,7 +51,7 @@
         </div>
         <div>
             <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                Total Customers
+                Kunder
             </p>
             <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
                 {{App\Customer::all()->count()}}
@@ -70,7 +70,7 @@
         </div>
         <div>
             <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                Total Tasks
+                Ärenden
             </p>
             <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
                 {{App\Project::all()->count()}}
@@ -88,7 +88,7 @@
         </div>
         <div>
             <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                Notices
+                Anteckningar
             </p>
             <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
             {{App\Notice::all()->count()}}
@@ -105,12 +105,13 @@
             </svg>
         </div>
         <div>
-            <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                New sales
+        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                Produkter
             </p>
             <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                376
+            {{App\Product::all()->count()}}
             </p>
+            
         </div>
     </div>
 </div>
@@ -120,142 +121,7 @@
 
 
 
-<div class="container w-full mx-auto pt-20">
 
-<div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
-
-    <!--Console Content-->
-
-    <div class="flex flex-wrap">
-        <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-            <!--Metric Card-->
-            <div class="bg-white border rounded shadow p-2">
-                <div class="flex flex-row items-center">
-                    <div class="flex-shrink pr-4">
-                        <div class="rounded p-3 bg-green-600"><i class="fa fa-wallet fa-2x fa-fw fa-inverse"></i></div>
-                    </div>
-                    <div class="flex-1 text-right md:text-center">
-                        <h5 class="font-bold uppercase text-gray-500">Total Revenue</h5>
-                        <h3 class="font-bold text-3xl">$3249 <span class="text-green-500"><i class="fas fa-caret-up"></i></span></h3>
-                    </div>
-                </div>
-            </div>
-            <!--/Metric Card-->
-        </div>
-        <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-            <!--Metric Card-->
-            <div class="bg-white border rounded shadow p-2">
-                <div class="flex flex-row items-center">
-                    <div class="flex-shrink pr-4">
-                        <div class="rounded p-3 bg-pink-600"><i class="fas fa-users fa-2x fa-fw fa-inverse"></i></div>
-                    </div>
-                    <div class="flex-1 text-right md:text-center">
-                        <h5 class="font-bold uppercase text-gray-500">Total Users</h5>
-                        <h3 class="font-bold text-3xl">249 <span class="text-pink-500"><i class="fas fa-exchange-alt"></i></span></h3>
-                    </div>
-                </div>
-            </div>
-            <!--/Metric Card-->
-        </div>
-        <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-            <!--Metric Card-->
-            <div class="bg-white border rounded shadow p-2">
-                <div class="flex flex-row items-center">
-                    <div class="flex-shrink pr-4">
-                        <div class="rounded p-3 bg-yellow-600"><i class="fas fa-user-plus fa-2x fa-fw fa-inverse"></i></div>
-                    </div>
-                    <div class="flex-1 text-right md:text-center">
-                        <h5 class="font-bold uppercase text-gray-500">New Users</h5>
-                        <h3 class="font-bold text-3xl">2 <span class="text-yellow-600"><i class="fas fa-caret-up"></i></span></h3>
-                    </div>
-                </div>
-            </div>
-            <!--/Metric Card-->
-        </div>
-        <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-            <!--Metric Card-->
-            <div class="bg-white border rounded shadow p-2">
-                <div class="flex flex-row items-center">
-                    <div class="flex-shrink pr-4">
-                        <div class="rounded p-3 bg-blue-600"><i class="fas fa-server fa-2x fa-fw fa-inverse"></i></div>
-                    </div>
-                    <div class="flex-1 text-right md:text-center">
-                        <h5 class="font-bold uppercase text-gray-500">Server Uptime</h5>
-                        <h3 class="font-bold text-3xl">152 days</h3>
-                    </div>
-                </div>
-            </div>
-            <!--/Metric Card-->
-        </div>
-        <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-            <!--Metric Card-->
-            <div class="bg-white border rounded shadow p-2">
-                <div class="flex flex-row items-center">
-                    <div class="flex-shrink pr-4">
-                        <div class="rounded p-3 bg-indigo-600"><i class="fas fa-tasks fa-2x fa-fw fa-inverse"></i></div>
-                    </div>
-                    <div class="flex-1 text-right md:text-center">
-                        <h5 class="font-bold uppercase text-gray-500">To Do List</h5>
-                        <h3 class="font-bold text-3xl">7 tasks</h3>
-                    </div>
-                </div>
-            </div>
-            <!--/Metric Card-->
-        </div>
-        <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-            <!--Metric Card-->
-            <div class="bg-white border rounded shadow p-2">
-                <div class="flex flex-row items-center">
-                    <div class="flex-shrink pr-4">
-                        <div class="rounded p-3 bg-red-600"><i class="fas fa-inbox fa-2x fa-fw fa-inverse"></i></div>
-                    </div>
-                    <div class="flex-1 text-right md:text-center">
-                        <h5 class="font-bold uppercase text-gray-500">Issues</h5>
-                        <h3 class="font-bold text-3xl">3 <span class="text-red-500"><i class="fas fa-caret-up"></i></span></h3>
-                    </div>
-                </div>
-            </div>
-            <!--/Metric Card-->
-        </div>
-    </div>
-
-   
-
-<footer class="bg-white border-t border-gray-400 shadow">
-<div class="container max-w-md mx-auto flex py-8">
-
-    <div class="w-full mx-auto flex flex-wrap">
-        <div class="flex w-full md:w-1/2 ">
-            <div class="px-8">
-                <h3 class="font-bold font-bold text-gray-900">About</h3>
-                <p class="py-4 text-gray-600 text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
-                </p>
-            </div>
-        </div>
-
-        <div class="flex w-full md:w-1/2">
-            <div class="px-8">
-                <h3 class="font-bold font-bold text-gray-900">Social</h3>
-                <ul class="list-reset items-center text-sm pt-3">
-                    <li>
-                        <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="#">Add social link</a>
-                    </li>
-                    <li>
-                        <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="#">Add social link</a>
-                    </li>
-                    <li>
-                        <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="#">Add social link</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-</div>
-</footer>
 
 
 

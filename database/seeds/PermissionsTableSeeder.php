@@ -236,6 +236,26 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => 57,
                 'title' => 'transaction_access',
             ],
+            [
+                'id'    => 58,
+                'title' => 'task_create',
+            ],
+            [
+                'id'    => 59,
+                'title' => 'task_edit',
+            ],
+            [
+                'id'    => 60,
+                'title' => 'task_show',
+            ],
+            [
+                'id'    => 61,
+                'title' => 'task_delete',
+            ],
+            [
+                'id'    => 62,
+                'title' => 'task_access',
+            ],
             
         ];
 

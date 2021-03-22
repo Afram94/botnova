@@ -94,8 +94,12 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        abort_if(Gate::denies('product_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $product->delete();
+
+        return back()->withSuccessMessage(__('global.data_deleted_successfully'));
     }
 }

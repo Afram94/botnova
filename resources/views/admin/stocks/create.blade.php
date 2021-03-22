@@ -26,8 +26,7 @@
                 <!-- <span class="help-block">{{ trans('cruds.stock.fields.product_helper') }}</span> -->
             </div>
 
-
-           
+                              
 
 
 

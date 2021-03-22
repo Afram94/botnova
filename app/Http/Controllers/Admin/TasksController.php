@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Task;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\StoreTaskRequest;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,11 +18,11 @@ class TasksController extends Controller
      */
     public function index()
     {
-        abort_if(Gate::denies('notice_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('task_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $tasks = Task::all();
 
-        return view('admin.tasks.index', compact('tasks'));
+        return view('admin.tasks.create', compact('tasks'));
     }
 
     /**
@@ -32,7 +32,11 @@ class TasksController extends Controller
      */
     public function create()
     {
-        //
+        abort_if(Gate::denies('task_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $tasks = Task::all();
+
+        return view('admin.tasks.create', compact('tasks'));
     }
 
     /**
@@ -41,9 +45,16 @@ class TasksController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreTaskRequest $request)
     {
-        //
+
+        return TasksController::create($request->validated());
+         
+ 
+
+        /* $task = Task::create($request->all());
+
+        return redirect()->route('admin.tasks.index'); */
     }
 
     /**

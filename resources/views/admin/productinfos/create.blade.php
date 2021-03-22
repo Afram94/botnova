@@ -6,12 +6,12 @@
     </div>
 
     <form method="POST" action="{{ route("admin.productinfos.store") }}" enctype="multipart/form-data">
-        @csrf                     
+        @csrf
 
         <div class="grid grid-rows-4 grid-flow-col gap-4 mx-6">
 
 
-        <div class="mb-1">
+            <div class="mb-1">
                 <label for="name" class="text-xs required font-bold ">Serial nummer</label>
 
                 <div class="form-group">
@@ -64,18 +64,27 @@
             </div>
 
             
+
+
+                       
+                        
+                                
+
+
+
             <div class="mb-1 ">
-                <label for="customers" class="text-xs required font-bold">User</label>
+                <label for="customers" class="text-xs required font-bold">Customer</label>
                 <div style="padding-bottom: 4px">
                     <span class="btn-sm btn-indigo select-all"
                         style="border-radius: 0">{{ trans('global.select_all') }}</span>
                     <span class="btn-sm btn-indigo deselect-all"
                         style="border-radius: 0">{{ trans('global.deselect_all') }}</span>
                 </div>
-                <select class="select2{{ $errors->has('customers') ? ' is-invalid' : '' }}" name="customers[]" id="customers"
-                    multiple>
+                <select class="select2{{ $errors->has('customers') ? ' is-invalid' : '' }}" name="customers[]"
+                    id="customers" multiple>
                     @foreach($customers as $id => $customers)
-                    <option value="{{ $id }}" {{ in_array($id, old('customers', [])) ? 'selected' : '' }}>{{ $customers }}
+                    <option value="{{ $id }}" {{ in_array($id, old('customers', [])) ? 'selected' : '' }}>
+                        {{ $customers }}
                     </option>
                     @endforeach
                 </select>
@@ -85,13 +94,13 @@
                 <span class="block"></span>
             </div>
 
-                   
-
-                                 
 
 
 
-           <!--  @can('product_create')
+
+
+
+            <!--  @can('product_create')
                 <div class="block my-4">
                     <a class="btn-md btn-green" href="{{ route("admin.stocks.store") }}">
                         Add Product
@@ -99,17 +108,24 @@
                 </div>
             @endcan
          -->
-                     
-                           
-                     
-                                               
-    
+
+
+
+
+
 
         </div>
 
         <div class="footer">
-            <button type="submit" class="submit-button">{{ trans('global.save') }}</button>
+            <button type="submit" class="submit-button">Förtsätt</button>
         </div>
+        
+        <div class="footer">
+        <a href="{{ route('admin.customers.index') }}">
+            <button >Klar</button>
+            </a>
+        </div>
+        
     </form>
 </div>
 @endsection

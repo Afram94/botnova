@@ -41,7 +41,8 @@ class ProductinfosController extends Controller
 
         $products = Product::all()->pluck('name', 'id');
         $customers = Customer::all()->pluck('name', 'id');
-        $stocks = Stock::all()->pluck('name', 'id');
+        $stocks = Stock::all()->pluck('current_stock', 'id');
+        
         $transactions = Transaction::all()->pluck('name', 'id');
 
         return view('admin.productinfos.create', compact('products', 'customers', 'stocks','transactions'));
@@ -61,7 +62,7 @@ class ProductinfosController extends Controller
         $productinfo->stocks()->sync($request->input('stocks', []));
         $productinfo->transactions()->sync($request->input('transactions', []));
 
-        return redirect()->route('admin.productinfos.index');
+        return redirect()->route('admin.stocks.index');
     }
 
     /**
@@ -104,9 +105,13 @@ class ProductinfosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Productinfo $productinfo)
     {
-        //
+        abort_if(Gate::denies('productinfo_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $productinfo->delete();
+
+        return back()->withSuccessMessage(__('global.data_deleted_successfully'));
     }
     
 }

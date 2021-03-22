@@ -3,7 +3,7 @@
 <div id="sidebar" class="sidebar-menu transform -translate-x-full ease-in">
     <div class="flex items-center justify-center mt-4">
         <div class="flex items-center">
-            <a href="/" class="text-white text-2xl mx-2 font-semibold">Smart Service</a>
+            <a href="/" class="text-white text-2xl mx-2 font-semibold">Bot Nova</a>
             <!-- <a href="/" class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Smart Service</a><span class="text-indigo-600">Table</span> -->
             <!-- <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Products <span class="text-indigo-600">Table</span></h2> -->
             
@@ -76,7 +76,7 @@
 
                 </i>
 
-                <span class="mx-4">Customers</span>
+                <span class="mx-4">Kunder</span>
             </a>
         @endcan
 
@@ -86,7 +86,7 @@
 
                 </i>
 
-                <span class="mx-4">Notices</span>
+                <span class="mx-4">Anteckningar</span>
             </a>
         @endcan
 
@@ -96,7 +96,7 @@
 
                 </i>
 
-                <span class="mx-4">Products</span>
+                <span class="mx-4">Produkter</span>
             </a>
         @endcan
 
@@ -106,7 +106,7 @@
 
                 </i>
 
-                <span class="mx-4">Products Info</span>
+                <span class="mx-4">Produkt Information</span>
             </a>
         @endcan
         
@@ -116,7 +116,7 @@
 
                 </i>
 
-                <span class="mx-4">Stocks</span>
+                <span class="mx-4">Lager</span>
             </a>
         @endcan
 
@@ -126,12 +126,12 @@
 
                 </i>
 
-                <span class="mx-4">Transactions</span>
+                <span class="mx-4">Transaktioner</span>
             </a>
         @endcan
 
 
-        @can('folder_access')
+        <!-- @can('folder_access')
             <a class="nav-link{{ request()->is('admin/folders*') ? ' active' : '' }}" href="{{ route('admin.folders.index') }}">
                 <i class="fa-fw fas fa-folder">
 
@@ -139,7 +139,7 @@
 
                 <span class="mx-4">{{ trans('cruds.folder.title') }}</span>
             </a>
-        @endcan
+        @endcan -->
         @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
             <a class="nav-link{{ request()->is('profile/password') ? ' active' : '' }}" href="{{ route('profile.password.edit') }}">
                 <i class="fa-fw fas fa-key">

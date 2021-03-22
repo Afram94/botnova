@@ -6,6 +6,7 @@ use App\ProductInfo;
 use Gate;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Response;
+use Illuminate\Validation\Rule;
 
 class StoreProductinfoRequest extends FormRequest
 {
@@ -34,8 +35,11 @@ class StoreProductinfoRequest extends FormRequest
                 'required',
             ],
             'serial_number'    => [
-                'string',
+                'integer',
                 'required',
+                Rule::unique('productinfos')
+                    ->where('serial_number', request()->input('serial_number'))
+                    
             ],
             'products.*' => [
                 'integer',
@@ -47,13 +51,20 @@ class StoreProductinfoRequest extends FormRequest
             ],
             'customers.*' => [
                 'integer',
-                'requred',
+                'required',
             ],
             'customers'   => [
                 'array',
                 'required',
             ],
             
+            
+        ];
+    }
+    public function messages(): array
+    {
+        return [
+            'serial_number.unique' => 'Serienummert finns redan.',
         ];
     }
 }

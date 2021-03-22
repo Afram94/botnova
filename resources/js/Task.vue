@@ -1,7 +1,8 @@
 <template>
-  <div id="app">
+  <div>
     <div class="flex justify-center ">
       <div class="min-h-screen flex overflow-x-scroll py-2">
+        <!-- <create-task></create-task> -->
         <div
           v-for="column in columns"
           :key="column.title"
@@ -27,12 +28,14 @@
 
 <script>
 import draggable from "vuedraggable";
-import TaskCard from "./components/TaskCard.vue";
+import TaskCard from "./components/TaskCard.vue"; 
+import CreateTask from "./components/CreateTask";
 export default {
   name: "App",
   components: {
-    TaskCard,
-    draggable
+    TaskCard, 
+    draggable,
+    CreateTask
   },
   data() {
     return {

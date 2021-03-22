@@ -2,7 +2,7 @@
 @section('content')
 <div class="main-card max-w-4xl px-10 my-4 py-6 ">
     <div class="header bg-gray-300 font-bold">
-        Create Customer
+        Create Notice
     </div>
 
     <form method="POST" action="{{ route("admin.notices.store") }}" enctype="multipart/form-data">

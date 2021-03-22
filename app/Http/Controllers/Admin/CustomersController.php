@@ -41,7 +41,7 @@ class CustomersController extends Controller
     {
         $customer = Customer::create($request->all());
         $customer->users()->sync($request->input('users', []));
-        $customer->productinfos()->sync($request->input('productinfos', []));
+        $customer->productinfos()->sync($request->input('productinfos', [])); 
 
         return redirect()->route('admin.customers.index')->withSuccessMessage(__('global.data_saved_successfully'));
     }
@@ -81,5 +81,12 @@ class CustomersController extends Controller
         $customer->delete();
 
         return back()->withSuccessMessage(__('global.data_deleted_successfully'));
+    }
+
+    public function customerInfo()
+    {
+        $customers = Customer::orderBy('name')->get();
+
+        return response($customers);
     }
 }

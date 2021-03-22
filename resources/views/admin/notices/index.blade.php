@@ -29,7 +29,7 @@
             <p class="italic text-gray-600 border-b">{{ $notice->description ?? '' }}</p> <!-- Description -->
         </div>
         <div id="quote">
-            <p class="text-gray-600 text-xs">{{ $notice->date ?? '' }}</p> <!-- Date -->
+            <p class="text-gray-600 text-xs">{{ $notice->created_at ?? '' }}</p> <!-- Date -->
         </div>
 
         <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5 text-center">

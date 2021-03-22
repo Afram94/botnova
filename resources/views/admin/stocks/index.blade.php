@@ -108,6 +108,12 @@
             </table>
         </div>
     </div>
+    
+    <div class="footer">
+        <a href="{{ route('admin.customers.index') }}">
+            <button >Klar</button>
+            </a>
+        </div>
 </div>
 
 
