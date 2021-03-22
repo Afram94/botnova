@@ -33,7 +33,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('products', 'ProductsController');
 
     //ProductInfos
-    Route::delete('productinfos/destroy', 'ProductInfosController@massDestroy')->name('productinfos.massDestroy');
+    
     Route::resource('productinfos', 'ProductInfosController');
 
 
