@@ -5,6 +5,7 @@
     <a class="btn-md btn-green" href="{{ route('admin.customers.create') }}">
         Add Customer
     </a>
+    <p class="text-center">Den här sidan visa alla kunder och man kan också skapa en kund genom attt klicka på <span class="bg-blue-400">Add Kund</span></p>
 </div>
 @endcan
 <div class="main-card">
@@ -73,52 +74,49 @@
 
                             <td class=" border-b-2 border-r-2 border-gray-300 py-3 px-6 text-left leading-4">
                                 <span
-                                    class=" text-black py-1 px-3 rounded-full font-semibold">{{ $customer->name ?? '' }}</span>
+                                    class="flex text-black py-1 px-3 rounded-full font-semibold">{{ $customer->name ?? '' }}</span>
                             </td>
 
                             <td class=" border-b-2 border-r-2 border-gray-300 py-3 px-6 text-left leading-4">
                                 <span
-                                    class=" text-black py-1 px-3 rounded-full font-semibold">{{ $customer->company ?? '' }}</span>
+                                    class="flex text-black py-1 px-3 rounded-full font-semibold">{{ $customer->company ?? '' }}</span>
                             </td>
 
                             <td class=" border-b-2 border-r-2 border-gray-300 py- px-6 text-left leading-4">
                                 <span
-                                    class=" text-black py-1 px-3 rounded-full font-semibold">{{ $customer->org_number ?? '' }}</span>
+                                    class="flex text-black py-1 px-3 rounded-full font-semibold">{{ $customer->org_number ?? '' }}</span>
                                     
                             </td>
 
                             <td class="border-b-2 border-r-2 border-gray-300 py-3 px-6 text-left leading-4">
                                 <span
-                                    class=" text-black py-1 px-3 rounded-full font-semibold">{{ $customer->SSN ?? '' }}</span>
+                                    class="flex text-black py-1 px-3 rounded-full font-semibold">{{ $customer->SSN ?? '' }}</span>
                             </td>
 
                             <td class="border-b-2 border-r-2 border-gray-300 py-3 px-6 text-left leading-4">
                                 <span
-                                    class=" text-black py-1 px-3 rounded-full font-semibold">{{ $customer->ZIP_Code ?? '' }}</span>
+                                    class="flex text-black py-1 px-3 rounded-full font-semibold">{{ $customer->ZIP_Code ?? '' }}</span>
                             </td>
 
                             <td class="border-b-2 border-r-2 border-gray-300 py-3 px-6 text-left leading-4">
                                 <span
-                                    class=" text-black py-1 px-3 rounded-full font-semibold">{{ $customer->residence ?? '' }}</span>
+                                    class="flex text-black py-1 px-3 rounded-full font-semibold">{{ $customer->residence ?? '' }}</span>
                             </td>
 
                             <td class="border-b-2 border-r-2 border-gray-300 py-3 px-6 text-left leading-4">
                                 <span
-                                    class=" text-black py-1 px-3 rounded-full font-semibold">{{ $customer->description ?? '' }}</span>
+                                    class="flex text-black py-1 px-3 rounded-full font-semibold">{{ $customer->description ?? '' }}</span>
                             </td>
 
 
-                            <td class="border-b-2 border-r-2 border-gray-300 py-3 px-6 text-left leading-4">
+                            <td class="border-b-2 border-r-2 border-gray-300 py-3 px-6 text-center leading-4">
                                 @foreach($customer->users as $key => $item)
                                 <span
-                                    class="bg-blue-400 text-white py-1 px-3 rounded-full font-semibold">{{ $item->name }}</span>
+                                    class="flex bg-blue-400 text-white py-1 px-3 rounded-full font-semibold">{{ $item->name }}</span>
                                 @endforeach
                             </td>
 
                             
-
-
-
 
                             <td class="py-3 px-6 text-center">
                                 <div class="flex item-center justify-center">
