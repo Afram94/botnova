@@ -12,6 +12,7 @@
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
+            
             <table class="striped bordered show-table">
                 <tbody>
                     <tr>
