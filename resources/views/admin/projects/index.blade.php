@@ -24,14 +24,14 @@
                             {{ trans('cruds.project.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.project.fields.name') }}
+                            beskrivning
                         </th>
 
                         <th>
-                            Customer Name
+                            Kunden Namn
                         </th>
                         <th>
-                            Company Name
+                            Företaget Namn
                         </th>
                         <th>
                             {{ trans('cruds.project.fields.users') }}

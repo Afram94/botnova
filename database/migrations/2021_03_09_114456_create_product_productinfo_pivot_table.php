@@ -15,7 +15,7 @@ class CreateProductProductinfoPivotTable extends Migration
     {
         Schema::create('product_productinfo', function (Blueprint $table) {
             $table->unsignedInteger('product_id');
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade')->onDelete("cascade");
             $table->unsignedInteger('productinfo_id');
             $table->foreign('productinfo_id')->references('id')->on('productinfos')->onDelete('cascade');
         });

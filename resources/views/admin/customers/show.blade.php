@@ -21,7 +21,7 @@
                     </tr>
                     <tr>
                         <th>
-                            Name
+                            Namn
                         </th>
                         <td>
                             {{ $customer->name }}
@@ -29,7 +29,7 @@
                     </tr>
                     <tr>
                         <th>
-                            Company
+                            Företag
                         </th>
                         <td>
                             {{ $customer->company }}
@@ -37,7 +37,7 @@
                     </tr>
                     <tr>
                         <th>
-                            Org_number
+                            Org_nummer
                         </th>
                         <td>
                             {{ $customer->org_number }}
@@ -45,7 +45,7 @@
                     </tr>
                     <tr>
                         <th>
-                            SSN
+                            Personnummer
                         </th>
                         <td>
                             {{ $customer->SSN }}
@@ -53,7 +53,7 @@
                     </tr>
                     <tr>
                         <th>
-                            ZIP_Code
+                            Post_nummer
                         </th>
                         <td>
                             {{ $customer->ZIP_Code }}
@@ -61,7 +61,7 @@
                     </tr>
                     <tr>
                         <th>
-                            Residence
+                            Ort
                         </th>
                         <td>
                             {{ $customer->residence }}
@@ -69,7 +69,7 @@
                     </tr>
                     <tr>
                         <th>
-                            Description
+                            Beskrivning
                         </th>
                         <td>
                             {{ $customer->description }}
@@ -77,7 +77,7 @@
                     </tr>
                     <tr>
                         <th>
-                            User
+                            Användare
                         </th>
                         <td>
                             @foreach($customer->users as $key => $users)

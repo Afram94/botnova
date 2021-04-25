@@ -23,7 +23,7 @@
                 </tr>
                 <tr>
                     <th>
-                        {{ trans('cruds.project.fields.name') }}
+                        beskrivning
                     </th>
                     <td>
                         {{ $project->name }}
@@ -43,7 +43,7 @@
 
                 <tr>
                     <th>
-                        Customer Name
+                        Kunden Namn
                     </th>
                     <td>
                         @foreach($project->customers as $key => $customers)
@@ -54,7 +54,7 @@
 
                 <tr>
                     <th>
-                        Company Name
+                        Företaget Namn
                     </th>
                     <td>
                         @foreach($project->customers as $key => $customers)

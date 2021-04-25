@@ -15,7 +15,7 @@ class AddRelationshipFieldsToTransactionsTable extends Migration
     {
         Schema::table('transactions', function (Blueprint $table) {
             $table->unsignedInteger('product_id');
-            $table->foreign('product_id', 'product_fk_1230972')->references('id')->on('products');
+            $table->foreign('product_id', 'product_fk_1230972')->references('id')->on('products')->onDelete("cascade");
             $table->unsignedInteger('user_id');
             $table->foreign('user_id', 'user_fk_1233734')->references('id')->on('users');
         });

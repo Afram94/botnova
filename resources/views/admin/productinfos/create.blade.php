@@ -12,7 +12,7 @@
 
 
             <div class="mb-1">
-                <label for="name" class="text-xs required font-bold ">Serial nummer</label>
+                <label for="name" class="text-xs required font-bold ">Serienummer</label>
 
                 <div class="form-group">
                     <input type="text" id="name" name="serial_number"
@@ -73,7 +73,7 @@
 
 
             <div class="mb-1 ">
-                <label for="customers" class="text-xs required font-bold">Customer</label>
+                <label for="customers" class="text-xs required font-bold">Anställda</label>
                 <div style="padding-bottom: 4px">
                     <span class="btn-sm btn-indigo select-all"
                         style="border-radius: 0">{{ trans('global.select_all') }}</span>

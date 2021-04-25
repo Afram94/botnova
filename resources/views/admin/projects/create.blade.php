@@ -35,7 +35,7 @@
 
 
             <div class="mb-3">
-                <label for="name" class="text-xs required">{{ trans('cruds.project.fields.name') }}</label>
+                <label for="name" class="text-xs required">Beskrivning</label>
 
                 <div class="form-group">
                     <input type="text" id="name" name="name" class="{{ $errors->has('name') ? ' is-invalid' : '' }}" value="{{ old('name') }}" required>

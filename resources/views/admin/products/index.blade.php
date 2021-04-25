@@ -3,12 +3,12 @@
 @can('product_create')
     <div class="block my-4">
         <a class="btn-md btn-green" href="{{ route('admin.products.create') }}">
-            Add Product
+            Skapa Produkter
         </a>
     </div>
 @endcan
 <div class="main-card">
-<h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Products <span class="text-indigo-600">Table</span></h2>
+<h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Produkter <span class="text-indigo-600">Tabell</span></h2>
 
     <div class="overflow-x-auto">
         <div class="max-w-screen max-h-screen bg-gray-100 items-center justify-center">
@@ -24,7 +24,7 @@
                             ID
                         </th>
                         <th class="ppy-3 px-6 text-center">
-                            Name
+                            Namn
                         </th>
                         
                         <th class="py-3 px-6 text-center">

@@ -3,12 +3,12 @@
 @can('productinfo_create')
     <div class="block my-4">
         <a class="btn-md btn-green" href="{{ route('admin.productinfos.create') }}">
-            Add Product Info
+            Skapa produkt Info
         </a>
     </div>
 @endcan
 <div class="main-card">
-    <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Products <span class="text-indigo-600">Table</span></h2>
+    <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Produkt-Info<span class="text-indigo-600">Tabell</span></h2>
 
         <div class="overflow-x-auto">
             <div class="max-w-screen max-h-screen bg-gray-100 items-center justify-center">
@@ -28,10 +28,10 @@
                             ID
                         </th>
                         <th class="py-3 px-6 text-center">
-                            Description
+                            Beskrivning
                         </th>
                         <th class="py-3 px-6 text-center">
-                            Serial Number
+                            Serienummer
                         </th>
                         <th class="py-3 px-6 text-center">
                             Kunder
@@ -85,13 +85,6 @@
                                     <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full font-semibold">{{ $item->name }}</span>
                                     @endforeach
                                 </td>
-
-                                
-                                
-                                
-                                
-
-                              
                           
                                 <td class="py-3 px-6 text-center">
                                     <div class="flex item-center justify-center">
@@ -108,13 +101,26 @@
                                             </a>
                                         </div>
                                         @endcan
+                                        
 
+                                        @can('productinfos_edit')
+                                    <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                        <a href="{{ route('admin.productinfos.edit', $productinfo->id) }}"
+                                            style="color: inherit;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                        @endcan
 
-                                        <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                        <!-- <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                                             </svg>
-                                        </div>
+                                        </div> -->
                                         @can('productinfo_delete')
                                     <form action="{{ route('admin.productinfos.destroy', $productinfo->id) }}" method="POST"
                                         onsubmit="return confirm('{{ trans('global.areYouSure') }}');"

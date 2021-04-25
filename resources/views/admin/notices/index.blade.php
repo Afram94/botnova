@@ -3,7 +3,7 @@
 @can('notice_create')
 <div class="block my-4">
     <a class="btn-md btn-green" href="{{ route('admin.notices.create') }}">
-        Add Notice
+        Skapa Anteckningar
     </a>
 </div>
 @endcan

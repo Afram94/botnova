@@ -9,7 +9,7 @@
         @csrf
         <div class="grid grid-rows-3 grid-flow-col gap-4 mx-6">
             <div class="">
-                <label for="name" class="text-xs required font-bold">Title</label>
+                <label for="name" class="text-xs required font-bold">Titel</label>
 
                 <div class="form-group">
                     <input type="text" id="name" name="title" class="{{ $errors->has('title') ? ' is-invalid' : '' }}"
@@ -23,7 +23,7 @@
 
 
             <div class="">
-                <label for="name" class="text-xs required font-bold">Description</label>
+                <label for="name" class="text-xs required font-bold">Beskrivning</label>
 
                 <div class="">
 
@@ -42,7 +42,7 @@
 
 
             <div class=" ">
-                <label for="users" class="text-xs required font-bold">User</label>
+                <label for="users" class="text-xs required font-bold">Anställda</label>
                 <div style="padding-bottom: 4px">
                     <span class="btn-sm btn-indigo select-all "
                         style="border-radius: 0">{{ trans('global.select_all') }}</span>

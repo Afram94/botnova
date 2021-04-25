@@ -15,7 +15,7 @@ class AddRelationshipFieldsToStocksTable extends Migration
     {
         Schema::table('stocks', function (Blueprint $table) {
             $table->unsignedInteger('product_id');
-            $table->foreign('product_id', 'product_fk_1230965')->references('id')->on('products');
+            $table->foreign('product_id', 'product_fk_1230965')->references('id')->on('products')->onDelete("cascade");
             
         });
     }

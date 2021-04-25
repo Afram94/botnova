@@ -3,14 +3,14 @@
 @can('customer_create')
 <div class="block my-4">
     <a class="btn-md btn-green" href="{{ route('admin.customers.create') }}">
-        Add Customer
+        Skapa kund
     </a>
     <p class="text-center">Den här sidan visa alla kunder och man kan också skapa en kund genom attt klicka på <span class="bg-blue-400">Add Kund</span></p>
 </div>
 @endcan
 <div class="main-card">
-    <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Customer <span
-            class="text-indigo-600">Table</span></h2>
+    <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Kunder <span
+            class="text-indigo-600">Tabell</span></h2>
 
 
     <div class="max-w-screen max-h-screen bg-gray-100 items-center justify-center">
@@ -26,29 +26,29 @@
                                 ID
                             </th>
                             <th class="py-3 px-6 text-center">
-                                Name
+                                Namn
                             </th>
                             <th class="py-3 px-6 text-center">
-                                Company
+                                Företag
                             </th>
 
                             <th class="py-3 px-6 text-center">
-                                Org_number
+                                Org_nummer
                             </th>
                             <th class="py-3 px-6 text-center">
-                                SSN
+                                Personnummer
                             </th>
                             <th class="py-3 px-6 text-center">
-                                ZIP_Code
+                                Post_nummer
                             </th>
                             <th class="py-3 px-6 text-center">
-                                Residence
+                                Ort
                             </th>
                             <th class="py-3 px-6 text-center">
-                                Description
+                                Beskrivning
                             </th>
                             <th class="py-3 px-6 text-center">
-                                User
+                                Användare
                             </th>
                             
                             <th class="py-3 px-6 text-center">

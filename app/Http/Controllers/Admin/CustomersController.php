@@ -83,10 +83,18 @@ class CustomersController extends Controller
         return back()->withSuccessMessage(__('global.data_deleted_successfully'));
     }
 
+    public function massDestroy(MassDestroyCustomerRequest $request)
+    {
+        Customer::whereIn('id', request('ids'))->delete();
+
+        return response(null, Response::HTTP_NO_CONTENT);
+    }
+
     public function customerInfo()
     {
         $customers = Customer::orderBy('name')->get();
 
         return response($customers);
     }
+    
 }

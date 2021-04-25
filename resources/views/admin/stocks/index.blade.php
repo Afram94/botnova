@@ -5,7 +5,7 @@
 
 <div class="block my-4">
         <a class="btn-md btn-green" href="{{ route('admin.stocks.create') }}">
-            Add Stock
+            Lägg till
         </a>
     </div>
 
@@ -36,7 +36,7 @@
                 <thead>
                     <tr>
                         <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider text-center">
-                            product
+                            Produkter
                         </th>
                        <!--  @admin
                             <th>
@@ -44,14 +44,14 @@
                             </th>
                         @endadmin -->
                         <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider text-center">
-                            Current stock
+                            Nuvarande i lager
                         </th>
                         <!-- @user -->
                             <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider text-center">
-                                Add Stock
+                                Lägg till
                             </th>
                             <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider text-center">
-                                Remove Stock
+                                Ta bort
                             </th>
                         <!-- @enduser -->
                         <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider text-center">

@@ -9,7 +9,7 @@
         @csrf
         <div class="body">
             <div class="mb-3">
-                <label for="email" class="text-xs">{{ trans('cruds.user.fields.email') }}</label>
+                <label for="email" class="text-xs">E-post</label>
 
                 <div class="form-group">
                     <input type="email" id="email" name="email" class="{{ $errors->has('email') ? 'is-invalid' : '' }}" value="{{ old('email', auth()->user()->email) }}" required>
@@ -19,7 +19,7 @@
                 @endif
             </div>
             <div class="mb-3">
-                <label for="password" class="text-xs">{{ trans('cruds.user.fields.password') }}</label>
+                <label for="password" class="text-xs">Lösenord</label>
 
                 <div class="form-group">
                     <input type="password" id="password" name="password" class="{{ $errors->has('password') ? 'is-invalid' : '' }}" required>
@@ -29,7 +29,7 @@
                 @endif
             </div>
             <div class="mb-3">
-                <label for="password_confirmation" class="text-xs">Repeat New {{ trans('cruds.user.fields.password') }}</label>
+                <label for="password_confirmation" class="text-xs">Upprepa nytt</label>
 
                 <div class="form-group">
                     <input type="password" id="password_confirmation" name="password_confirmation" required>

@@ -9,7 +9,7 @@
         @csrf
         <div class="grid grid-rows-4 grid-flow-col gap-4 mx-6">
             <div class="mb-1">
-                <label for="name" class="text-xs required font-bold ">Name</label>
+                <label for="name" class="text-xs required font-bold ">Namn</label>
 
                 <div class="form-group">
                     <input type="text" id="name" name="name" class="{{ $errors->has('name') ? ' is-invalid' : '' }}"
@@ -24,7 +24,7 @@
 
 
             <div class="mb-1">
-                <label for="name" class="text-xs required font-bold">Company</label>
+                <label for="name" class="text-xs required font-bold">Företag</label>
 
                 <div class="form-group">
                     <input type="text" id="name" name="company" class="{{ $errors->has('name') ? ' is-invalid' : '' }}"
@@ -39,7 +39,7 @@
 
 
             <div class="mb-1">
-                <label for="name" class="text-xs required font-bold">Org_number</label>
+                <label for="name" class="text-xs required font-bold">Org_nummer</label>
 
                 <div class="form-group">
                     <input type="text" id="name" name="org_number"
@@ -55,7 +55,7 @@
 
 
             <div class="mb-1">
-                <label for="name" class="text-xs required font-bold">SSN</label>
+                <label for="name" class="text-xs required font-bold">Personnummer</label>
 
                 <div class="form-group">
                     <input type="text" id="name" name="SSN" class="{{ $errors->has('name') ? ' is-invalid' : '' }}"
@@ -70,7 +70,7 @@
 
 
             <div class="mb-1">
-                <label for="name" class="text-xs required font-bold">ZIP_Code</label>
+                <label for="name" class="text-xs required font-bold">Post_nummer</label>
 
                 <div class="form-group">
                     <input class="color-gray-400" type="text" id="name" name="ZIP_Code"
@@ -85,7 +85,7 @@
 
 
             <div class="mb-1">
-                <label for="name" class="text-xs required font-bold">Residence</label>
+                <label for="name" class="text-xs required font-bold">Ort</label>
 
                 <div class="form-group">
                     <input type="text" id="name" name="residence"
@@ -100,7 +100,7 @@
 
 
             <div class="mb-1">
-                <label for="name" class="text-xs required font-bold">Description</label>
+                <label for="name" class="text-xs required font-bold">Beskrivning</label>
 
                 <div class="form-group">
                     <input type="text" id="name" name="description"
@@ -118,7 +118,7 @@
 
 
             <div class="mb-1 ">
-                <label for="users" class="text-xs required font-bold">User</label>
+                <label for="users" class="text-xs required font-bold">Användare</label>
                 <div style="padding-bottom: 4px">
                     <span class="btn-sm btn-indigo select-all"
                         style="border-radius: 0">{{ trans('global.select_all') }}</span>

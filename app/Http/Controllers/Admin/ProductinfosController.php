@@ -17,11 +17,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ProductinfosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         abort_if(Gate::denies('productinfo_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -30,11 +26,6 @@ class ProductinfosController extends Controller
         return view('admin.productinfos.index', compact('productinfos'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         abort_if(Gate::denies('productinfo_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -48,12 +39,6 @@ class ProductinfosController extends Controller
         return view('admin.productinfos.create', compact('products', 'customers', 'stocks','transactions'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(StoreProductinfoRequest $request)
     {
         $productinfo = Productinfo::create($request->all());
@@ -65,53 +50,50 @@ class ProductinfosController extends Controller
         return redirect()->route('admin.stocks.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function show(Productinfo $productinfo)
     {
-        //
+        abort_if(Gate::denies('productinfo_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $productinfo->load('customers' ,'products');
+
+        return view('admin.productinfos.show', compact('productinfo'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function edit(Productinfo $productinfo)
     {
-        //
+        abort_if(Gate::denies('productinfo_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $customers = Customer::all()->pluck('name', 'id');
+        $products = Product::all()->pluck('name', 'id');
+
+        $productinfo->load('customers', 'products');
+
+        return view('admin.productinfos.edit', compact('products', 'customers', 'productinfo'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(MassDestroyProductRequest $request, Productinfo $productinfo)
     {
-        //
+        $productinfo->update($request->all());
+        $productinfo->products()->sync($request->input('products', []));
+        $productinfo->customers()->sync($request->input('customers', []));
+        
+
+        return redirect()->route('admin.productinfos.index')->withSuccessMessage(__('global.data_edited_successfully'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Productinfo $productinfo)
     {
-        abort_if(Gate::denies('productinfo_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('product_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $productinfo->delete();
 
         return back()->withSuccessMessage(__('global.data_deleted_successfully'));
     }
-    
+
+    public function massDestroy(MassDestroyProductinfoRequest $request)
+    {
+        Productinfo::whereIn('id', request('ids'))->delete();
+
+        return response(null, Response::HTTP_NO_CONTENT);
+    }
 }
