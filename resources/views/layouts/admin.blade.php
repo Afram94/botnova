@@ -49,12 +49,19 @@
                 href="/admin/projects"> Skapa ärende</a>
         </div>
 
+      <!-- <div class="flex items-center justify-between p-4 text-sm font-semibold text-purple-100 bg-purple-600 hover:bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div> -->
+
         <div class="flex text-sm">
             <a class=" border-2 border-white-500 rounded-md text-white-500 px-4 py-2 transition duration-300 ease-in-out hover:text-gray-500 mr-6"
                     href=" #" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                 Logga ut</a>
             <!-- </div> -->
         </div>
+      
     </nav>
 
 

@@ -3,7 +3,8 @@
 @can('project_create')
 <div class="block my-4">
     <a class="btn-md btn-green" href="{{ route('admin.projects.create') }}">
-        {{ trans('global.add') }} {{ trans('cruds.project.title_singular') }}
+       <!--  {{ trans('global.add') }} {{ trans('cruds.project.title_singular') }} -->
+       Skapa Ärende
     </a>
 </div>
 @endcan

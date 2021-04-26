@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 <div class="overflow-x-auto">
-<h2 class="text-3xl font-semibold text-gray-800 md:text-4xl">Transactions <span class="text-indigo-600">Table</span></h2>
+<h2 class="text-3xl font-semibold text-gray-800 md:text-4xl">Transaktioner <span class="text-indigo-600">Tabell</span></h2>
         <div class="max-w-screen max-h-screen items-center justify-center">
         
             <div class="w-full lg:w-11/12">

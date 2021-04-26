@@ -63,15 +63,6 @@
                 <span class="block"></span>
             </div>
 
-            
-
-
-                       
-                        
-                                
-
-
-
             <div class="mb-1 ">
                 <label for="customers" class="text-xs required font-bold">Anställda</label>
                 <div style="padding-bottom: 4px">
@@ -95,11 +86,6 @@
             </div>
 
 
-
-
-
-
-
             <!--  @can('product_create')
                 <div class="block my-4">
                     <a class="btn-md btn-green" href="{{ route("admin.stocks.store") }}">
@@ -117,14 +103,14 @@
         </div>
 
         <div class="footer">
-            <button type="submit" class="submit-button">Förtsätt</button>
+            <button type="submit" class="submit-button">Förtsätt till lager</button>
         </div>
         
-        <div class="footer">
-        <a href="{{ route('admin.customers.index') }}">
+        <!-- <div class="footer">
+        <a href="{{ route('admin.customers.index') }}" class="flex justify-between p-2 px-6 py-1 text-sm font-semibold text-purple-100 bg-purple-600 hover:bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple">
             <button >Klar</button>
             </a>
-        </div>
+        </div> -->
         
     </form>
 </div>

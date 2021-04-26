@@ -110,7 +110,7 @@
     </div>
     
     <div class="footer">
-        <a href="{{ route('admin.customers.index') }}">
+        <a href="{{ route('admin.customers.index') }}" class="justify-between p-2 px-6 py-1 text-sm font-semibold text-purple-100 bg-purple-600 hover:bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple">
             <button >Klar</button>
             </a>
         </div>

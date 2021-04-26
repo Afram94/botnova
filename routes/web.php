@@ -9,6 +9,15 @@ Route::get('/home', function () {
     return redirect()->route('admin.home');
 });
 
+ // About
+/*  Route::get('/about', function(){
+    return View('admin/about'); 
+}); */
+
+Route::get('about', function(){
+    return View('about'); // Your Blade template name
+});
+
 Auth::routes(['register' => false]);
 // Admin
 
