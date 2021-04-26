@@ -5,7 +5,7 @@
     <a class="btn-md btn-green" href="{{ route('admin.customers.create') }}">
         Skapa kund
     </a>
-    <p class="text-center">Den här sidan visa alla kunder och man kan också skapa en kund genom attt klicka på <span class="bg-blue-400">Add Kund</span></p>
+    <!-- <p class="text-center">Den här sidan visa alla kunder och man kan också skapa en kund genom attt klicka på <span class="bg-blue-400">Add Kund</span></p> -->
 </div>
 @endcan
 <div class="main-card">
@@ -112,7 +112,7 @@
                             <td class="border-b-2 border-r-2 border-gray-300 py-3 px-6 text-center leading-4">
                                 @foreach($customer->users as $key => $item)
                                 <span
-                                    class="flex bg-blue-400 text-white py-1 px-3 rounded-full font-semibold">{{ $item->name }}</span>
+                                    class="bg-blue-400 text-white py-1 px-12 rounded-full font-semibold text-center">{{ $item->name }}</span>
                                 @endforeach
                             </td>
 
