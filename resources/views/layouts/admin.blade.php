@@ -41,7 +41,7 @@
                 
     <nav class="flex justify-between w-full p-2">
         <!-- <a href="/"><span class="font-semibold text-xl tracking-tight">Smart Service</span></a> -->
-        <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">BoT <span class="text-indigo-600">NoVA</span></h2>
+        <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">BoT<span class="text-indigo-600">NoVA</span></h2>
         <!-- <div class="md:items-center md:w-auto flex"> -->
 
         <div class="flex text-sm">

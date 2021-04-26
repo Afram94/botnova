@@ -2,7 +2,7 @@
 @section('content')
 <div class="main-card">
     <div class="header">
-        {{ trans('global.show') }} {{ trans('cruds.project.title') }}
+        Visa Ärenden
     </div>
 
     <div class="body">

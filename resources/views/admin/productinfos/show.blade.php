@@ -3,7 +3,7 @@
 
 <div class="main-card">
     <div class="header">
-        Show Transactions
+        Visa produkten-info
     </div>
 
     <div class="body">

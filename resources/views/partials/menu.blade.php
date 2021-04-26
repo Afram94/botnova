@@ -3,7 +3,7 @@
 <div id="sidebar" class="sidebar-menu transform -translate-x-full ease-in">
     <div class="flex items-center justify-center mt-4">
         <div class="flex items-center">
-            <a href="/" class="text-white text-2xl mx-2 font-semibold">Bot Nova</a>
+            <a href="/" class="text-white text-2xl mx-2 font-semibold">BotNova</a>
             <!-- <a href="/" class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Smart Service</a><span class="text-indigo-600">Table</span> -->
             <!-- <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Products <span class="text-indigo-600">Table</span></h2> -->
             

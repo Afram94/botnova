@@ -9,9 +9,10 @@
 </div>
 @endcan
 <div class="main-card">
-    <div class="header">
-        {{ trans('cruds.project.title_singular') }} {{ trans('global.list') }}
-    </div>
+    <!-- <div class="header"> -->
+        <!-- {{ trans('cruds.project.title_singular') }} {{ trans('global.list') }} -->
+        <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl text-center">Ärende <span class="text-indigo-600">Tabell</span></h2>
+    <!-- </div> -->
 
     <div class="body">
         <div class="w-full">
